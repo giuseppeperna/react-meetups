@@ -1,5 +1,6 @@
 import classes from './MeetupItem.module.css';
 import Card from '../ui/Card';
+import PropTypes from 'prop-types';
 
 function MeetupItem(props) {
     return (
@@ -19,6 +20,13 @@ function MeetupItem(props) {
             </li>
         </Card>
     )
+}
+
+MeetupItem.propTypes = {
+    image: PropTypes.string.isRequired,
+    title: PropTypes.string,
+    address: PropTypes.string,
+    description: PropTypes.string
 }
 
 export default MeetupItem;
