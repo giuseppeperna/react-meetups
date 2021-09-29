@@ -1,5 +1,6 @@
 import classes from './MeetupList.module.css';
 import MeetupItem from './MeetupItem';
+import PropTypes from 'prop-types';
 
 function MeetupList(props) {
     return <ul className={classes.list}>
@@ -9,10 +10,13 @@ function MeetupList(props) {
             id={meetup.id}
             image={meetup.image}
             title={meetup.title}
-            address={meetup.address}
             description={meetup.description}
         />)}
     </ul>;
+}
+
+MeetupList.propTypes = {
+    meetups: PropTypes.array.isRequired
 }
 
 export default MeetupList;
