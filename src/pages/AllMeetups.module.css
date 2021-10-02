@@ -1,0 +1,20 @@
+.addBtn {
+    text-decoration: none;
+    font: inherit;
+    cursor: pointer;
+    color: #ffffff;
+    border: 1px solid #ab004a;
+    background-color: #77002e;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+}
+
+.addBtn:hover {
+    color: #77002e;
+    border: 1px solid #77002e;
+    background-color: #ffe2ed;
+}
+
+p {
+    margin-bottom: 40px;
+}
