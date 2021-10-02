@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import MeetupList from '../components/meetups/MeetupList';
+import classes from './AllMeetups.module.css';
 
 function AllMeetups() {
     /** useState returns an array with two elements: the current state (isLoading)
@@ -49,7 +51,10 @@ function AllMeetups() {
     return (
         <section>
             <h1>All Meetups</h1>
-            <MeetupList meetups={loadedMeetups}/>
+            {loadedMeetups.length >= 1 ? <MeetupList meetups={loadedMeetups}/>
+            : <p>You got no meetups yet. Start adding some?</p>}
+            {loadedMeetups.length === 0 &&
+            <Link to="/new-meetup" className={classes.addBtn}>Add New Meetup</Link>}
         </section>
     );
 }
