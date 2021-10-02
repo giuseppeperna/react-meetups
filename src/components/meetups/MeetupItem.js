@@ -3,6 +3,7 @@ import classes from './MeetupItem.module.css';
 import Card from '../ui/Card';
 import PropTypes from 'prop-types';
 import FavoritesContext from '../../store/favorites-context';
+
 function MeetupItem(props) {
 
     // useContext connects the context state to the component
@@ -27,6 +28,21 @@ function MeetupItem(props) {
             })
         }
     }
+
+    function removeMeetup() {
+        fetch(
+            `https://react-meetup-api-2efe3-default-rtdb.firebaseio.com/meetups/${props.id}.json`,
+            {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+        }).then(() => {
+            // Reload the homepage
+            window.location.reload();
+        });
+    }
+
     return (
         <Card>
             <li className={classes.item}>
@@ -43,6 +59,9 @@ function MeetupItem(props) {
                         { itemIsFavorite ? 'Remove from Favorites'
                             : 'To Favorites'
                         }
+                    </button>
+                    <button className={classes.delete} onClick={removeMeetup}>
+                        Delete Meetup
                     </button>
                 </div>
             </li>
