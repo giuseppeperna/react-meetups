@@ -1,6 +1,10 @@
+import { useHistory } from 'react-router-dom';
 import NewMeetupForm from '../components/meetups/NewMeetupForm';
 
-function NewMeetup(props) {
+function NewMeetup() {
+    // Expose an history object to manipulate the browser history
+    const history = useHistory();
+
     // Send POST request to Firebase to store new meetup
     function addMeetupHandler(meetupData) {
         fetch(
@@ -12,7 +16,10 @@ function NewMeetup(props) {
                     'Content-Type': 'application/json'
                 }
             }
-        );
+        ).then(() => {
+            // Redirect to homepage after the POST request
+           history.replace('/')
+        });
     }
     return (
         <section>
