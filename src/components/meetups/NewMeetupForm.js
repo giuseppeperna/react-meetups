@@ -1,4 +1,4 @@
-import classes from './NewMeetupForm.module.css';
+import classes from './NewMeetupForm.module.scss';
 import Card from '../ui/Card';
 import { useRef } from 'react';
 

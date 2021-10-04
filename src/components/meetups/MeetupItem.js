@@ -1,5 +1,5 @@
 import {useContext} from 'react';
-import classes from './MeetupItem.module.css';
+import classes from './MeetupItem.module.scss';
 import Card from '../ui/Card';
 import PropTypes from 'prop-types';
 import FavoritesContext from '../../store/favorites-context';
