@@ -1,10 +1,11 @@
+@import "../../style/_variables.scss";
 .header {
     width: 100%;
     min-height: 5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #77002e;
+    background-color: $primary-color;
     padding: 0 10%;
     .logo > a {
         font-size: 2rem;
@@ -25,7 +26,7 @@
     .link {
         text-decoration: none;
         font-size: 1.5rem;
-        color: #fcb8d2;
+        color: $btn-hover;
     }
 
     a:hover,
@@ -35,7 +36,7 @@
     }
 
     .badge {
-        background-color: #cc2062;
+        background-color: $background-accent-color;
         color: white;
         border-radius: 12px;
         padding: 0 1rem;

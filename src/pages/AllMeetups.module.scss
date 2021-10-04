@@ -1,19 +1,20 @@
+@import "../style/_variables.scss";
 .allMeetups {
     .addBtn {
         text-decoration: none;
         font: inherit;
         cursor: pointer;
         color: #ffffff;
-        border: 1px solid #ab004a;
-        background-color: #77002e;
+        border: 1px solid $secondary-color;
+        background-color: $primary-color;
         padding: 0.5rem 1.5rem;
         border-radius: 4px;
     }
 
     .addBtn:hover {
-        color: #77002e;
-        border: 1px solid #77002e;
-        background-color: #ffe2ed;
+        color: $primary-color;
+        border: 1px solid $primary-color;
+        background-color: $background-primary-color;
     }
 
     p {
