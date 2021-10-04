@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import FavoritesContext from '../../store/favorites-context';
 import { Link } from 'react-router-dom';
 
-import classes from './MainNavigation.module.css';
+import classes from './MainNavigation.module.scss';
 function MainNavigation() {
     const favoritesCtx = useContext(FavoritesContext);
     const totalFavorites = favoritesCtx.totalFavorites;

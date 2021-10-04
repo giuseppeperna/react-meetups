@@ -1,4 +1,4 @@
-import classes from './MeetupList.module.css';
+import classes from './MeetupList.module.scss';
 import MeetupItem from './MeetupItem';
 import PropTypes from 'prop-types';
 
